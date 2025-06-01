@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +27,7 @@
             height: 400px;
             overflow: hidden;
             border-radius: 10px;
-            background: #333;
+            background: linear-gradient(to top, rgba(105, 11, 63, 1) 50px, rgba(0, 0, 0, 0) 100%);
             transition: width 0.3s ease, height 0.3s ease;
             cursor: pointer;
         }
@@ -53,18 +53,25 @@
             opacity: 1;
         }
 
-        .overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
-            box-sizing: border-box;
-            color: white;
-            opacity: 1;
-            transition: opacity 0.3s ease;
-        }
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(105, 11, 63, 1) 50px, rgba(105, 11, 63, 0) 100%);
+    box-sizing: border-box;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+.card:hover .overlay {
+    background: linear-gradient(to top, rgba(105, 11, 63, 1) 50px, rgb(0, 0, 0) 100%);
+}
+
+
+
 
         .video-card .overlay .description {
             display: none;
@@ -80,26 +87,31 @@
 
         .title {
             margin-bottom: 10px;
-            background: #f4b400;
-            padding: 5px 10px;
+            margin-left: 10px;
+            background: #ffffff;
+            padding: 10px 10px;
             border-radius: 20px;
             font-size: 14px;
-            color: #333;
+            color: #000000;
             font-weight: bold;
-            width: 50px;
+            width: 60px;
             text-align: center;
         }
 
         .subtitle {
-            margin-top: 10px;
-            font-size: 14px;
+            margin-bottom: 15px;
+            margin-left: 10px;
+            font-size: 25px;
             font-weight: bold;
             color: white;
         }
 
         .description {
+            margin-left: 10px;
+            margin-bottom: 50px;
             margin-top: 10px;
             font-size: 12px;
+            color: rgb(255, 255, 255);
         }
 
         @media (max-width: 768px) {
@@ -139,9 +151,11 @@
                 Seu navegador não suporta vídeos.
             </video>
             <div class="overlay">
-                <div class="title">Título 1</div>
-                <div class="subtitle">Subtítulo 1</div>
-                <p class="description">Descrição do vídeo 1.</p>
+                <div class="title">ETAPA 1</div>
+                <div class="subtitle">Pré-Qualificação</div>
+                <p class="description">Segmentação das contas (e dos contatos) <br> que realmente importam,
+                    poupando o seu <br> time de vendas de leads fora do perfil.
+                </p>
             </div>
         </div>
         <div class="video-card" onmouseover="this.querySelector('video').play()" onmouseout="this.querySelector('video').pause()">
@@ -150,8 +164,8 @@
                 Seu navegador não suporta vídeos.
             </video>
             <div class="overlay">
-                <div class="title">Título 2</div>
-                <div class="subtitle">Subtítulo 2</div>
+                <div class="title">ETAPA 2 </div>
+                <div class="subtitle">Criação de Demanda</div>
                 <p class="description">Descrição do vídeo 2.</p>
             </div>
         </div>
@@ -161,8 +175,8 @@
                 Seu navegador não suporta vídeos.
             </video>
             <div class="overlay">
-                <div class="title">Título 3</div>
-                <div class="subtitle">Subtítulo 3</div>
+                <div class="title">ETAPA 3</div>
+                <div class="subtitle">Captura de Demanda</div>
                 <p class="description">Descrição do vídeo 3.</p>
             </div>
         </div>
