@@ -9,7 +9,7 @@
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #f9f9f9fb;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -28,7 +28,7 @@
             overflow: hidden;
             border-radius: 10px;
             /* Fondo de la tarjeta cuando el video no está activo */
-            background: linear-gradient(to top, #FD9800 50px, rgba(0, 0, 0, 0) 100%);
+            background: linear-gradient(to top, #fd980085 50px, rgba(0, 0, 0, 0) 100%);
             transition: width 0.3s ease, height 0.3s ease;
             cursor: pointer;
         }
@@ -46,7 +46,7 @@
             height: 100%;
             object-fit: cover;
             pointer-events: none;
-            opacity: 0.3;
+            opacity: 0.7;
             filter: brightness(0.5) blur(2px);
             transition: opacity 0.3s ease, filter 0.3s ease;
         }
@@ -65,7 +65,7 @@
             width: 100%;
             padding: 20px;
             /* Fondo del overlay en estado normal */
-            background: linear-gradient(to top, #FD9800 50px, rgba(105, 11, 63, 0) 100%);
+            background: linear-gradient(to top, #fd980000 50px, rgba(105, 11, 63, 0) 100%);
             box-sizing: border-box;
             color: white;
             opacity: 1;
